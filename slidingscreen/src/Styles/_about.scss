@@ -1,0 +1,128 @@
+
+.about {
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 13.3rem;
+
+  .about-container {
+    width: 86vw;
+
+    .about-title {
+      font-size: 6vh;
+      line-height: 6vh;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-color: white;
+      -webkit-text-stroke-width: 0.1rem;
+      font-weight: 900;
+      letter-spacing: .8rem;
+      padding-left: 1rem;
+
+      .text-colored {
+        -webkit-text-fill-color: #F7E626;
+        -webkit-text-stroke-width: 0;
+      }
+    }
+
+    .about-quote {
+      position: relative;
+      height: auto;
+      margin-top: 5rem;
+      padding: 3rem;
+      background-color: #F7E626;
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 3rem;
+      text-align: left;
+
+      .quote-triangle {
+        position: absolute;
+        bottom: -1.2rem;
+        left: 4rem;
+        height: 2.8rem;
+        width: 2.8rem;
+        background-color: #F7E626;
+        transform: rotate(45deg);
+
+      }
+    }
+
+    .about-description {
+      font-size: 1.3rem;
+      color: white;
+      line-height: 2.1rem;
+      letter-spacing: 0.07rem;
+      font-weight: 300;
+      text-align: left;
+      margin-top: 5rem;
+    }
+
+    .group-photo {
+      width: 100%;
+      height: auto;
+      margin-top: 7rem;
+    }
+
+    .about-team {
+      margin-top: 3rem;
+
+      .team-member {
+        text-align: center;
+        color: white;
+
+        .member-photo-frame {
+          width: 100%;
+          max-width: 50rem;
+          overflow: hidden;
+
+          .member-photo {
+            width: 100%;
+            transition: transform .7s ease-in-out;
+            vertical-align: middle;
+
+            &:hover {
+              transition: transform .7s ease-in-out;
+              transform:scale(1.1);
+              -ms-transform:scale(1.1); /* IE 9 */
+              -moz-transform:scale(1.1); /* Firefox */
+              -webkit-transform:scale(1.1); /* Safari and Chrome */
+              -o-transform:scale(1.1);
+            }
+          }
+        }
+
+        .member-name {
+          margin-top: 1.8rem;
+          font-size: 1.8rem;
+          line-height: 2.5rem;
+          font-weight: 500;
+        }
+
+        .member-position {
+          font-size: 1.6rem;
+          line-height: 2.5rem;
+          font-weight: 300;
+        }
+
+        .member-sm {
+          font-size: 1.3rem;
+          margin-top: 1.5rem;
+          margin-bottom: 1.2rem;
+
+          .fab {
+            color: white;
+            margin: 0 .7rem;
+
+            &:hover {
+              color: #F7E626;
+            }
+          }
+        }
+      }
+    }
+  }
+}
