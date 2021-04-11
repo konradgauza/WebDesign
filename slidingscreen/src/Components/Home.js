@@ -10,8 +10,10 @@ const Home = () => {
                         Website <span className='text-colored'>designer</span> and <span className='text-colored'>developer</span> based on Warsaw
                     </h1>
                     <p className="home-description"> Unconventional solutions and ideas that suit you. Do not rely on stereotypes. Stand out from the crowd and be remembered. Find yourself in the world of digital imagination.</p>
-                    <a href="/#" className="home-btn primary">WHO WE ARE</a>
-                    <a href="/#" className="home-btn">WHAT WE DO</a>
+                    <div className="home-buttons">
+                        <a href="/#" className="home-btn primary">WHO WE ARE</a>
+                        <a href="/#" className="home-btn">WHAT WE DO</a>
+                    </div>
                 </div>
             </div>
         </>

@@ -1,0 +1,64 @@
+
+.carousel {
+  padding: 4rem 0;
+  color: white;
+  width: 100%;
+  background-color: transparent;
+
+  .carousel-title {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+  .quote {
+    padding: 3rem;
+    background-color: rgba(255,255,255,.08);
+    display: flex!important;
+    flex-direction: column;
+    align-items: center;
+    max-width: 97%;
+    margin: 0 auto;
+
+
+    .fas {
+      color: #F7E626;
+      font-size: 3rem;
+      align-self: flex-start;
+      margin-bottom: 3rem;
+    }
+
+    .quote-text {
+      color: white;
+      font-size: 1.6rem;
+      text-align: left;
+      line-height: 3rem;
+      font-style: italic;
+      margin-bottom: 4rem;
+    }
+
+    .quote-avatar {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      margin-bottom: 4rem;
+    }
+
+    .quote-name {
+      font-size: 1.4rem;
+    }
+  }
+
+  .slick-dots {
+    bottom: -5rem;
+  }
+
+  .slick-dots li button:before {
+    color: white;
+    font-size: 1rem;
+  }
+
+  .slick-dots li.slick-active button:before{
+    color: white;
+  }
+}

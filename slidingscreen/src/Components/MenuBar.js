@@ -13,19 +13,20 @@ const MenuBar = (props) => {
         setVisible(!visible);
         setTimeout(() => {
             history.push(tab)
+            if(tab !== "/" && menuOpen) {
+                setMenuOpen(!menuOpen);
+            }
         }, 600)
     }
 
-    const openHamburgerMenu = () => {
-        setMenuOpen(!menuOpen);
-    }
 
 
     return (
         <>
-            <div className="menu-bar" onClick={menuOpen? ()=> {setTimeout(()=> openHamburgerMenu(), 600)} : ()=> {}}>
+            <div className="menu-bar">
+                <div className="container">
                 <img src={Logo} alt="Logo" className="menu-logo" onClick={() => changeTab("/")}/>
-                <img src={Hamburger} alt="Logo" className="hamburger-icon" onClick={openHamburgerMenu}/>
+                <img src={Hamburger} alt="Logo" className="hamburger-icon" onClick={()=> setMenuOpen(!menuOpen)}/>
 
                 <ul className={menuOpen? "menu-list-mobile" : "menu-list"}>
                     <li className="menu-item" onClick={() => changeTab("/about")}>ABOUT US</li>
@@ -34,6 +35,7 @@ const MenuBar = (props) => {
                     <li className="menu-item" onClick={() => changeTab("/blog")}>BLOG</li>
                     <li className="menu-item" onClick={() => changeTab("/contact")}>CONTACT</li>
                 </ul>
+                </div>
             </div>
         </>
     )

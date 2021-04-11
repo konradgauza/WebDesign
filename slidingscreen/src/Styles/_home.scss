@@ -6,6 +6,8 @@
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  justify-content: center;
 
   &:after {
     content: " ";
@@ -20,6 +22,7 @@
   .home-content {
     height: 100vh;
     width: 100vw;
+    max-width: 55rem;
     position: relative;
     z-index: 1;
     display: flex;
@@ -28,7 +31,11 @@
     align-items: center;
     text-align: center;
     padding: 0 2rem;
-    //border: 0.2rem solid black;
+
+    @media (min-width: 800px) {
+      width: 80%;
+      max-width: 80rem;
+    }
 
     .home-title {
       font-size: 6vh;
@@ -43,7 +50,7 @@
     }
 
     .home-description {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       color: white;
       line-height: 2.1rem;
       letter-spacing: 0.14rem;
@@ -51,24 +58,39 @@
       font-weight: 300;
     }
 
-    .home-btn {
-      letter-spacing: 0.2rem;
-      text-decoration: none;
-      color: white;
-      padding: 1.5rem 3rem;
-      font-size: 1.2rem;
-      font-weight: 700;
-      min-width: 12rem;
-      border: 1px solid white;
+    .home-buttons {
       width: 100%;
-      margin-top: 1.7rem;
+      display: flex;
+      flex-direction: column;
 
-      &.primary {
-        border: none;
-        color: black;
-        background-color: #F7E626;
+      @media (min-width: 480px) {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .home-btn {
+        letter-spacing: 0.2rem;
+        text-decoration: none;
+        color: white;
+        padding: 1.5rem 3rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        min-width: 12rem;
+        border: 1px solid white;
+        width: 100%;
+        margin-top: 1.7rem;
+
+        @media (min-width: 480px) {
+          width: 17rem;
+          margin: 1.7rem 1rem 0 1rem;
+        }
+
+        &.primary {
+          border: none;
+          color: black;
+          background-color: #F7E626;
+        }
       }
     }
   }
-
 }

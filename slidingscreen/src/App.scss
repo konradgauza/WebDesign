@@ -1,4 +1,4 @@
-@import 'reset';
+@import 'Styles/reset/reset';
 @import 'Styles/about';
 @import 'Styles/contact';
 @import 'Styles/home';
@@ -6,10 +6,12 @@
 @import 'Styles/menuBar';
 @import 'Styles/services';
 @import 'Styles/works';
+@import 'Styles/opinionCarousel';
 
 html {
   font-size: 62.5%;
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
 * {
