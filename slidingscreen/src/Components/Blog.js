@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Blog1 from '../assets/blog1.png';
 import Blog2 from '../assets/blog2.png';
 import Blog3 from '../assets/blog3.png';
@@ -53,13 +53,18 @@ const Blog = () => {
             cover: Blog6
         }
     ];
+    const [animation, setAnimation] = useState(false);
+
+    useEffect(()=> {
+        setTimeout(()=> setAnimation(true), 100)
+    }, [])
 
 
     return (
         <>
             <div className="blog">
-                <h2 className="blog-title"><span className='text-colored'>OUR</span> BLOG</h2>
-                <div className="blog-container">
+                <h2 className={animation? "blog-title" : "blog-title default"}><span className='text-colored'>OUR</span> BLOG</h2>
+                <div className={animation? "blog-container" : "blog-container default"}>
                     {articles.map(article => {
                         return (
                             <div className="single-article">

@@ -23,7 +23,7 @@ const App = () => {
             <MenuBar visible={visible} setVisible={setVisible} visible2={visible2} setVisible2={setVisible2}/>
             <Switch>
                 <Route exact path="/">
-                    <Home/>
+                    <Home  visible={visible} setVisible={setVisible} visible2={visible2} setVisible2={setVisible2}/>
                 </Route>
                 <Route path="/about">
                     <About/>

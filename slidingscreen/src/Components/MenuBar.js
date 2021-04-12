@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom';
 import Logo from "../assets/logo.png";
 import Hamburger from '../assets/hamburger.png';
 

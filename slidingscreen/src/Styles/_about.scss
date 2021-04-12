@@ -1,7 +1,8 @@
+@import 'settings/mixins';
 
 .about {
   width: 100vw;
-  background-color: rgb(10, 10, 10);
+  background-color: #111111;
 
   .container {
     width: 100%;
@@ -15,6 +16,7 @@
 
     @media (min-width: 570px) {
       max-width: 72rem;
+      padding-top: 15rem;
     }
 
     @media (min-width: 770px) {
@@ -24,28 +26,12 @@
     @media (min-width: 1000px) {
       max-width: 140rem;
     }
-
   }
 
-  .about-title {
-    font-size: 6vh;
-    line-height: 6vh;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: white;
-    -webkit-text-stroke-width: 0.1rem;
-    font-weight: 900;
-    letter-spacing: .8rem;
-    padding-left: 1rem;
-    margin-bottom: 5rem;
-
-    .text-colored {
-      -webkit-text-fill-color: #F7E626;
-      -webkit-text-stroke-width: 0;
-    }
-  }
+  @include title;
 
   .about-top-section {
+    width: 100%;
 
     @media (min-width: 1000px) {
       display: flex;
@@ -60,10 +46,18 @@
       font-weight: 800;
       line-height: 3.3rem;
       text-align: left;
+      transition: 1.15s ease-in-out;
+      opacity: 1;
 
       @media (min-width: 1000px) {
         margin-right: 3rem;
         max-width: 50%;
+      }
+
+      &.default {
+        margin-right: 9rem;
+        margin-left: -6rem;
+        opacity: 0;
       }
 
       .quote-triangle {
@@ -86,6 +80,14 @@
       font-weight: 300;
       text-align: left;
       margin-top: 5rem;
+      transition: 1.15s ease-in-out;
+      opacity: 1;
+
+      &.default {
+        margin-left: 6rem;
+        margin-right: -6rem;
+        opacity: 0;
+      }
 
       @media (min-width: 1000px) {
         margin-top: 0;
@@ -98,6 +100,14 @@
     width: 100%;
     height: auto;
     margin-top: 7rem;
+    transition: 1.15s ease-in-out;
+    opacity: 1;
+
+    &.default {
+      margin-top: 16rem;
+      margin-bottom: -9rem;
+      opacity: 0;
+    }
   }
 
   .about-team {
@@ -147,9 +157,9 @@
           &:hover {
             transition: transform .7s ease-in-out;
             transform:scale(1.1);
-            -ms-transform:scale(1.1); /* IE 9 */
-            -moz-transform:scale(1.1); /* Firefox */
-            -webkit-transform:scale(1.1); /* Safari and Chrome */
+            -ms-transform:scale(1.1);
+            -moz-transform:scale(1.1);
+            -webkit-transform:scale(1.1);
             -o-transform:scale(1.1);
           }
         }

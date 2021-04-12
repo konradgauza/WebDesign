@@ -70,7 +70,7 @@ const OpinionCarousel = () => {
                                         <i className="fas fa-quote-left"></i>
                                         <p className="quote-text">{comment.text}</p>
                                         <img src={comment.avatar} alt="avatar" className="quote-avatar"/>
-                                        <h4 className="quote-name">{comment.name}, Customer</h4>
+                                        <h4 className="quote-name" >{comment.name}, Customer</h4>
                                     </div>
                             )
                         })}

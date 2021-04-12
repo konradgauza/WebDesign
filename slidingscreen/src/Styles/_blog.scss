@@ -1,32 +1,16 @@
+@import 'settings/mixins';
 
 .blog {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(10, 10, 10);
-  padding: 12rem 7vw 8rem 7vw;
-
-  .blog-title {
-    font-size: 6vh;
-    line-height: 6vh;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: white;
-    -webkit-text-stroke-width: 0.1rem;
-    font-weight: 900;
-    letter-spacing: .8rem;
-    padding-left: 1rem;
-    margin-bottom: 7rem;
-
-    .text-colored {
-      -webkit-text-fill-color: #F7E626;
-      -webkit-text-stroke-width: 0;
-    }
-  }
+  @include background;
+  @include title;
 
   .blog-container {
+    @include container;
 
     .single-article {
       margin-bottom: 6rem;
+
+      @include single-responsive;
 
       .article-image {
         width: 100%;

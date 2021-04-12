@@ -8,6 +8,13 @@
   width: 100vw;
   display: flex;
   justify-content: center;
+  transition: 1.15s ease-in-out;
+  opacity: 1;
+
+  &.default {
+    background-image: none;
+    opacity: 0;
+  }
 
   &:after {
     content: " ";
@@ -42,6 +49,11 @@
       line-height: 6vh;
       color: white;
       font-weight: 600;
+      transition: 1.15s ease-in-out;
+
+      &.default {
+        margin-bottom: 6rem;
+      }
 
       .text-colored {
         color: #F7E626;
@@ -79,6 +91,11 @@
         border: 1px solid white;
         width: 100%;
         margin-top: 1.7rem;
+        transition: 1.15s ease-in-out;
+
+        &.default {
+          margin-right: 6rem;
+        }
 
         @media (min-width: 480px) {
           width: 17rem;
@@ -89,6 +106,11 @@
           border: none;
           color: black;
           background-color: #F7E626;
+          transition: 1.15s ease-in-out;
+
+          &.default {
+            margin-left: 6rem;
+          }
         }
       }
     }

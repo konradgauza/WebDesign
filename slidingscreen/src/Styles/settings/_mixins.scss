@@ -1,0 +1,88 @@
+
+@mixin title {
+  &-title {
+    font-size: 6vh;
+    line-height: 6vh;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.1rem;
+    font-weight: 900;
+    letter-spacing: .8rem;
+    padding-left: 1rem;
+    margin-bottom: 5rem;
+    transition: 1.15s ease-in-out;
+    opacity: 1;
+
+    @media (min-width: 770px) {
+      font-size: 7rem;
+    }
+
+    &.default {
+      margin-bottom: 9rem;
+      margin-top: -4rem;
+      opacity: 0;
+    }
+
+    .text-colored {
+      -webkit-text-fill-color: #F7E626;
+      -webkit-text-stroke-width: 0;
+    }
+  }
+}
+
+
+
+@mixin container {
+  max-width: 50rem;
+  margin: 5rem auto;
+  transition: 1.15s ease-in-out;
+  opacity: 1;
+  text-align: left;
+
+  @media (min-width: 770px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 76rem;
+    margin-top: 10rem;
+  }
+
+  @media (min-width: 1000px) {
+    max-width: 130rem;
+  }
+
+  &.default {
+    margin-bottom: -9rem;
+    margin-top: 14rem;
+    opacity: 0;
+
+    @media (min-width: 1000px) {
+      margin-bottom: -14rem;
+      margin-top: 19rem;
+    }
+  }
+}
+
+@mixin single-responsive {
+  @media (min-width: 770px) {
+    max-width: 46%;
+  }
+
+  @media (min-width: 1000px) {
+    max-width: 32%;
+    margin-bottom: 8rem;
+  }
+}
+
+@mixin background {
+  background-color: #111111;
+  width: 100%;
+  height: 100%;
+  padding: 12rem 7vw 8rem 7vw;
+  text-align: center;
+
+  @media (min-width: 770px) {
+    padding-top: 20rem;
+  }
+}
