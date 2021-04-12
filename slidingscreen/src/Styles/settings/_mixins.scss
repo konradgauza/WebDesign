@@ -1,3 +1,5 @@
+@import 'colors';
+
 
 @mixin title {
   &-title {
@@ -5,7 +7,7 @@
     line-height: 6vh;
     color: transparent;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: $font;
     -webkit-text-stroke-width: 0.1rem;
     font-weight: 900;
     letter-spacing: .8rem;
@@ -25,7 +27,7 @@
     }
 
     .text-colored {
-      -webkit-text-fill-color: #F7E626;
+      -webkit-text-fill-color: $primary;
       -webkit-text-stroke-width: 0;
     }
   }

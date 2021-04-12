@@ -1,6 +1,7 @@
+@import 'settings/colors';
 
 .home {
-  background-color: black;
+  background-color: $dark;
   background-image: url("../assets/home-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -47,7 +48,7 @@
     .home-title {
       font-size: 6vh;
       line-height: 6vh;
-      color: white;
+      color: $font;
       font-weight: 600;
       transition: 1.15s ease-in-out;
 
@@ -56,14 +57,14 @@
       }
 
       .text-colored {
-        color: #F7E626;
+        color: $primary;
         font-weight: 700;
       }
     }
 
     .home-description {
       font-size: 1.4rem;
-      color: white;
+      color: $font;
       line-height: 2.1rem;
       letter-spacing: 0.14rem;
       margin-top: 2rem;
@@ -83,7 +84,7 @@
       .home-btn {
         letter-spacing: 0.2rem;
         text-decoration: none;
-        color: white;
+        color: $font;
         padding: 1.5rem 3rem;
         font-size: 1.2rem;
         font-weight: 700;
@@ -104,7 +105,7 @@
 
         &.primary {
           border: none;
-          color: black;
+          color: $dark;
           background-color: #F7E626;
           transition: 1.15s ease-in-out;
 

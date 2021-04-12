@@ -1,13 +1,15 @@
+@import 'settings/colors';
+
 .menu-bar {
   width: 100%;
   position: fixed;
   z-index: 10;
   padding: 1.5rem 0;
-  background-color: #111111;
+  background-color: $secondary;
   height: 8rem;
 
   @media (min-width: 900px) {
-    background-color: black;
+    background-color: $dark;
   }
 
   .container{
@@ -16,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    position: relative;
 
     @media (min-width: 900px) {
       justify-content: flex-start;
@@ -27,6 +30,7 @@
       margin-left: 2rem;
       margin-right: 3rem;
       z-index: 1;
+      max-height: 4.8rem;
     }
 
     .hamburger-icon {
@@ -47,7 +51,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
-      background-color: black;
+      background-color: $dark;
       height: 60vh;
       width: 100%;
       padding: 10rem 0 3rem 0;
@@ -59,35 +63,96 @@
       .menu-item {
         font-size: 1rem;
         font-family: "Al Tarikh", sans-serif;
-        color: white;
+        color: $font;
         letter-spacing: 0.3rem;
         padding: 2.5rem 6rem;
+
+        &.sm {
+          display: none;
+
+          @media (min-width: 900px) {
+            font-size: 3rem;
+            padding: 1rem 0;
+          }
+        }
+
       }
     }
 
-    .menu-list {
-      display: none;
+    .menu-nav {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      margin: 0;
+      top: -1.5rem;
 
       @media (min-width: 900px) {
-        display: flex;
+        position: unset;
       }
 
-      .menu-item {
-        font-size: 1rem;
-        font-family: "Al Tarikh", sans-serif;
+      .menu-list {
+        display: none;
+
+        @media (min-width: 900px) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%
+        }
+
+        .menu-item {
+          font-size: 1rem;
+          font-family: "Al Tarikh", sans-serif;
+          color: $font;
+          padding: 2rem 3rem;
+          cursor: pointer;
+          transition: linear .3s;
+          letter-spacing: 0.2rem;
+
+          &.sm {
+            margin-left: auto;
+            margin-right: 2rem;
+            font-size: 3rem;
+            padding: 1rem 0;
+          }
+
+          &:hover {
+            color: $primary;
+            letter-spacing: 0.4rem;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .menu-sm {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      right: 2.5rem;
+      top: 8rem;
+      cursor: pointer;
+      transition: opacity 1.3s, visibility 1.3s ease-in-out;
+      opacity: 1;
+      visibility: visible;
+
+      &.default {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1.3s, visibility 1.3s ease-in-out;
+      }
+
+      .fab {
         color: white;
-        padding: 2rem 3rem;
-        cursor: pointer;
-        transition: linear .3s;
-        letter-spacing: 0.2rem;
+        font-size: 3rem;
+        margin-top: 2.5rem;
+        z-index: 0;
 
         &:hover {
-          color: #F7E626;
-          letter-spacing: 0.4rem;
-          font-weight: 400;
+          color: $primary;
         }
       }
     }
   }
-
 }

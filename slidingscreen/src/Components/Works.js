@@ -1,32 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Butterfly from '../assets/butterfly.png';
-import Clock from '../assets/clock.jpg';
-import Indian from '../assets/indian.jpg';
-import Headphones from '../assets/headphones.jpg';
-import Lineart from '../assets/lineart.jpg';
-import Stairs from '../assets/stairs.jpg';
+import { works } from '../Store/arrayStore'
 
 const Works = () => {
-    const works = [
-        {
-            image:  Butterfly
-        },
-        {
-            image:  Clock
-        },
-        {
-            image:  Indian
-        },
-        {
-            image:  Headphones
-        },
-        {
-            image:  Lineart
-        },
-        {
-            image:  Stairs
-        },
-    ]
     const [animation, setAnimation] = useState(false);
 
     useEffect(()=> {

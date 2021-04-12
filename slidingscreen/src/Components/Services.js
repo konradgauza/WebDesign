@@ -1,38 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { services } from '../Store/arrayStore'
 
 const Services = () => {
-    const services = [
-        {
-            icon: "fas fa-desktop",
-            title: "Website Design",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
-        },
-        {
-            icon: "fas fa-paper-plane",
-            title: "Email Marketing",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
-        },
-        {
-            icon: "fas fa-chart-line",
-            title: "Digital Analytics",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
-        },
-        {
-            icon: "fas fa-pencil-alt",
-            title: "Visual Editor",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
-        },
-        {
-            icon: "fas fa-download",
-            title: "Backup & Security",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
-        },
-        {
-            icon: "fas fa-comments",
-            title: "IT Consultancy",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
-        },
-    ]
     const [animation, setAnimation] = useState(false);
 
     useEffect(()=> {

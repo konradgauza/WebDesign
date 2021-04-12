@@ -1,7 +1,8 @@
+@import 'settings/colors';
 
 .carousel {
   padding: 4rem 0;
-  color: white;
+  color: $font;
   width: 100%;
   background-color: transparent;
 
@@ -22,14 +23,14 @@
 
 
     .fas {
-      color: #F7E626;
+      color: $primary;
       font-size: 3rem;
       align-self: flex-start;
       margin-bottom: 3rem;
     }
 
     .quote-text {
-      color: white;
+      color: $font;
       font-size: 1.6rem;
       text-align: left;
       line-height: 3rem;
@@ -54,11 +55,11 @@
   }
 
   .slick-dots li button:before {
-    color: white;
+    color: $font;
     font-size: 1rem;
   }
 
   .slick-dots li.slick-active button:before{
-    color: white;
+    color: $font;
   }
 }

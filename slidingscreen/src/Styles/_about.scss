@@ -1,8 +1,9 @@
 @import 'settings/mixins';
+@import 'settings/colors';
 
 .about {
   width: 100vw;
-  background-color: #111111;
+  background-color: $secondary;
 
   .container {
     width: 100%;
@@ -41,7 +42,7 @@
       position: relative;
       display: inline-block;
       padding: 3rem;
-      background-color: #F7E626;
+      background-color: $primary;
       font-size: 2.5rem;
       font-weight: 800;
       line-height: 3.3rem;
@@ -66,7 +67,7 @@
         left: 4rem;
         height: 2.8rem;
         width: 2.8rem;
-        background-color: #F7E626;
+        background-color: $primary;
         transform: rotate(45deg);
 
       }
@@ -74,7 +75,7 @@
 
     .about-description {
       font-size: 1.6rem;
-      color: white;
+      color: $font;
       line-height: 3rem;
       letter-spacing: 0.07rem;
       font-weight: 300;
@@ -129,7 +130,7 @@
 
     .team-member {
       text-align: center;
-      color: white;
+      color: $font;
 
       @media (min-width: 570px) {
         width: 45%;
@@ -188,7 +189,7 @@
           margin: 0 .7rem;
 
           &:hover {
-            color: #F7E626;
+            color: $primary;
           }
         }
       }

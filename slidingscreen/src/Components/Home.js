@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 const Home = (props) => {
     const [animation, setAnimation] = useState(false);
-    const {visible, setVisible, visible2, setVisible2 } = props;
+    const {visible, setVisible } = props;
     let history = useHistory();
 
     useEffect(()=> {
@@ -11,7 +11,6 @@ const Home = (props) => {
     }, [])
 
     const changeTab = (tab) => {
-        setVisible2(!visible2);
         setVisible(!visible);
         setTimeout(() => {
             history.push(tab)

@@ -10,20 +10,23 @@ import Blog from "./Components/Blog";
 import Works from "./Components/Works";
 
 
-const App = () => {
+const App = (event) => {
     const [visible, setVisible] = useState(true);
-    const [visible2, setVisible2] = useState(true);
+    const [smOpen, setSmOpen] = useState(false);
 
+    const hideSm = (event) => {
+        event.target.className === "fab fa-connectdevelop" ? setSmOpen(!smOpen) : setSmOpen(false)
+    }
 
   return (
-    <div className='app'>
+    <div className='app' onClick={hideSm}>
         <div className={visible? 'div on-top' : 'div on-bottom'}> </div>
-        <div className={visible2? 'div on-left' : 'div on-right'}> </div>
+        <div className={visible? 'div on-left' : 'div on-right'}> </div>
         <Router>
-            <MenuBar visible={visible} setVisible={setVisible} visible2={visible2} setVisible2={setVisible2}/>
+            <MenuBar visible={visible} setVisible={setVisible} smOpen={smOpen}/>
             <Switch>
                 <Route exact path="/">
-                    <Home  visible={visible} setVisible={setVisible} visible2={visible2} setVisible2={setVisible2}/>
+                    <Home visible={visible} setVisible={setVisible}/>
                 </Route>
                 <Route path="/about">
                     <About/>

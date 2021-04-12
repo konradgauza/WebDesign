@@ -1,4 +1,5 @@
 @import 'settings/mixins';
+@import 'settings/colors';
 
 .services {
   @include background;
@@ -20,7 +21,7 @@
       @include single-responsive;
 
       .fas {
-        background-color: #F7E626;
+        background-color: $primary;
         font-size: 2.5rem;
         padding: 2.5rem;
         margin-right: 2.7rem;
@@ -29,7 +30,7 @@
       }
 
       .service-content {
-        color: white;
+        color: $font;
 
         .content-title {
           font-size: 2.1rem;

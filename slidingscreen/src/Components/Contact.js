@@ -20,7 +20,6 @@ const Contact = () => {
                     <textarea name="" id="" cols="30" rows="10" className="textarea" placeholder="Your Message"></textarea>
                     <a href="#">SUBMIT FORM</a>
                 </form>
-
             </div>
         </>
     )
