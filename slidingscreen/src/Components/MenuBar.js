@@ -19,7 +19,7 @@ const MenuBar = (props) => {
     }
 
     return (
-        <>
+
             <div className="menu-bar">
                 <div className="container">
                     <img src={Logo} alt="Logo" className="menu-logo" onClick={() => changeTab("/")}/>
@@ -42,7 +42,6 @@ const MenuBar = (props) => {
                     </div>
                 </div>
             </div>
-        </>
     )
 }
 

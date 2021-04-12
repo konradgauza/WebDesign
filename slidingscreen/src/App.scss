@@ -37,64 +37,60 @@ html {
     position: fixed;
     transition: 1.3s ease-in-out;
     z-index: 15;
-    //background-color: black;
-    //background-image: url("https://wallpaperstock.net/abstract-lava-line-wallpapers_42207_1920x1200.jpg");
-    //height: 100vh;
-    //height: 130vh;
     height: 100vh;
     width: 100vw;
 
     @media (min-width: 770px) {
       z-index: 3;
+      height: calc(100vh - 8rem);
     }
-
-    //desktop
-    //height: 300vh;
-    //width: 430vh;
-    //transform: rotate(35deg);
-    //transition: 1.5s cubic-bezier(0.0001,0.01,0.1,0.01);    // zostawione w razie w
-    //transform: rotate3d(1, 1, 0.5, 10deg) matrix3d(1,0,0,0,0,1,6,0,0,0,1,0,50,100,0,1.1);     // zostawione w razie w
-
+    @media (min-width: 1500px) {
+      height: 300vh;
+      width: 430vh;
+      transform: rotate(35deg);
+    }
 
     &.on-top {
       top: -100vh;
 
       @media (min-width: 770px) {
-        top: calc(-100vh + 8rem);
+        top: calc(-100vh + 16rem);
       }
-
-      //desktop
-      //top: -360vh;
-      //left: -100vw;
-      //transform: rotate(20deg);
-      //top: -130vh;     // zostawione w razie w
-      //transform: rotate(115deg);     // zostawione w razie w
+      @media (min-width: 1500px) {
+        top: -360vh;
+        left: -100vw;
+        transform: rotate(20deg);
+      }
     }
 
     &.on-bottom {
       top: 100vh;
-      //desktop
-      //left: 100vw;
-      //top: 50vh;     // zostawione w razie w
-      //top: 135vh;     // zostawione w razie w
-      //background-color: red;     // zostawione w razie w
+
+      @media (min-width: 1500px) {
+        left: 100vw;
+      }
     }
 
     &.on-left {
       left: -100vw;
 
-      //desktop
-      //left: -240vw;
-      //background-color: red;     // zostawione w razie w
+      @media (min-width: 770px) {
+        top: 8rem;
+      }
+      @media (min-width: 1500px) {
+        left: -240vw;
+      }
     }
 
     &.on-right {
       left: 100vw;
 
-      //desktop
-      //transform: rotate(20deg);
-      //left: 100vw;     // zostawione w razie w
-      //transform: rotate(135deg);     // zostawione w razie w
+      @media (min-width: 770px) {
+        top: 8rem;
+      }
+      @media (min-width: 1500px) {
+        transform: rotate(20deg);
+      }
     }
   }
 }

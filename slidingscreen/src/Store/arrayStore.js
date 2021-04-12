@@ -13,6 +13,10 @@ import Blog3 from '../assets/blog3.png';
 import Blog4 from '../assets/blog4.png';
 import Blog5 from '../assets/blog5.png';
 import Blog6 from '../assets/blog6.png';
+import Avatar1 from "../assets/avatar1.png";
+import Avatar2 from "../assets/avatar2.png";
+import Avatar3 from "../assets/avatar3.png";
+import Avatar4 from "../assets/avatar4.png";
 
 export const team = [
     {
@@ -128,6 +132,29 @@ export const articles = [
         day: "18",
         month: "DEC",
         cover: Blog6
+    }
+];
+
+export const comments = [
+    {
+        name: "Oscar",
+        text: " I'm always impressed with the services. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. ",
+        avatar: Avatar1
+    },
+    {
+        name: "Alice",
+        text: " I'm always impressed with the services. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. ",
+        avatar: Avatar2
+    },
+    {
+        name: "Jessie",
+        text: " I'm always impressed with the services. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. ",
+        avatar: Avatar3
+    },
+    {
+        name: "Mike",
+        text: " I'm always impressed with the services. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. ",
+        avatar: Avatar4
     }
 ];
 
