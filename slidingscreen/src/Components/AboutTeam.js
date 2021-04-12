@@ -4,9 +4,9 @@ import { team } from '../Store/arrayStore'
 const AboutTeam = () => {
     return (
         <div className="about-team">
-            {team.map((member) => {
+            {team.map((member, index) => {
                 return (
-                    <div className="team-member">
+                    <div className="team-member" key={index + 1}>
                         <div className="member-photo-frame">
                             <img src={member.photo} alt="" className="member-photo"/>
                         </div>

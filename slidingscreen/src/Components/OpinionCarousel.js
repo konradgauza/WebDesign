@@ -38,9 +38,9 @@ const OpinionCarousel = () => {
         <div className="carousel">
             <h2 className="carousel-title"> Testimonials</h2>
             <Slider {...settings}>
-                {comments.map((comment) => {
+                {comments.map((comment, index) => {
                     return(
-                        <div className='quote'>
+                        <div className='quote' key={index + 1}>
                             <i className="fas fa-quote-left"></i>
                             <p className="quote-text">{comment.text}</p>
                             <img src={comment.avatar} alt="avatar" className="quote-avatar"/>
