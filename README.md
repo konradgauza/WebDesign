@@ -18,9 +18,9 @@
 ![demo screenshot](./src/assets/readMe/aboutUs.png)
 
 
-## 💥 Aplication and functionality
+## 💥 Application and functionality
 
-* Website composed from 6 tabs on the different routes
+* Website composed of 6 tabs on the different routes
 * Controlled components
 * Reviews in the form of carousel
 * Controlled contact form
